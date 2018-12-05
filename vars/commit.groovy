@@ -1,7 +1,14 @@
 def call() {
-    if(env.BRANCH_NAME == 'master') {
-      error("Your builds don't deserve to pass")
-    }
+  switch(env.BRANCH_NAME) {
+    case 'master':
+    case 'develop':
+    case ~/^feature\/.+$/:
+    case ~/^release\/.+$/:
+    case ~/^hotfix\/.+$/:
+      break
+    default:
+      error("invalid branch name")
+  }
 }
 
 return this
