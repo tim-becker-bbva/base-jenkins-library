@@ -1,5 +1,5 @@
 def call() {
-    echo 'Called commit()'
+    echo env.GIT_BRANCH
 }
 
 return this
