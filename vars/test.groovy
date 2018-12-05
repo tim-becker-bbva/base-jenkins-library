@@ -1,5 +1,5 @@
 def call(buildId) {
-    echo "Hey it's working for build: ${buildId}"
+    echo "Does this build get the update? ${buildId}"
 }
 
 return this
