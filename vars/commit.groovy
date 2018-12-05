@@ -1,4 +1,5 @@
 def call() {
+  echo env.BRANCH_NAME
   switch(env.BRANCH_NAME) {
     case 'master':
     case 'develop':
