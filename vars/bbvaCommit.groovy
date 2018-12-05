@@ -8,7 +8,7 @@ def call() {
     case ~/^hotfix\/.+$/:
       break
     default:
-      error("invalid branch name")
+      error("Invalid branch name")
   }
 }
 
