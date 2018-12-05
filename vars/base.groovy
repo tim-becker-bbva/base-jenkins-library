@@ -9,9 +9,12 @@ def build() {
   sh 'make build'
 }
 
-final Map test = {
-  run: sh 'make test'
-  analyze: junit 'target/surefire-reports/**/*.xml'
+def test() {
+  sh 'make test'
+}
+
+def analyzeTest() {
+  junit 'target/surefire-reports/**/*.xml'
 }
 
 return this
