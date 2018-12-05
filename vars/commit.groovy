@@ -1,5 +1,5 @@
-def call() {
-    echo "Called commit call"
+def commit() {
+    echo 'Called commit.commit()'
 }
 
 return this
