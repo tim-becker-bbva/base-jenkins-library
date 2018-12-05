@@ -1,5 +1,7 @@
 def call() {
-    echo env.BRANCH_NAME
+    if(env.BRANCH_NAME == 'master') {
+      error("Your builds don't deserve to pass")
+    }
 }
 
 return this
